@@ -28,66 +28,7 @@
         </div>
     </div>
     <div class="h-data">
-        <div class="module_content">
-            <div class="module_content_detail module_dynamicnumber" id="310" projectid="310" rowid="218"
-                module-index="0"><a target="" rel="" class="number-link" style="text-align: center;">
-                    <div class="number-desc-wrapper" data-aos="zoom-in-up">
-                        <div class="number-count module_text_content" onmouseover=""><count-up
-                                style="font-size: 54px; color: rgb(111, 111, 111); font-family: 微软雅黑; font-weight: normal; text-decoration: none; font-style: normal;"
-                                :end-val="2002" :options="CountUpOptions"></count-up>
-                        </div> <span class="number-unit"
-                            style="font-size: 14px; color: rgb(111, 111, 111); font-family: 微软雅黑; font-weight: normal; text-decoration: none; font-style: normal;">年</span>
-                    </div>
-                    <div class="number-bottom-text"
-                        style="font-size: 16px; color: rgb(117, 100, 79); font-family: 微软雅黑; font-weight: normal; text-decoration: none; font-style: normal;">
-                        公司成立</div>
-                </a></div>
-        </div>
-        <div class="module_content" data-aos="zoom-in-up">
-            <div class="module_content_detail module_dynamicnumber" id="313" projectid="313" rowid="218"
-                module-index="0"><a target="" rel="" class="number-link" style="text-align: center;">
-                    <div class="number-desc-wrapper">
-                        <div class="number-count module_text_content" onmouseover=""><count-up
-                                style="font-size: 54px; color: rgb(111, 111, 111); font-family: 微软雅黑; font-weight: normal; text-decoration: none; font-style: normal;"
-                                :end-val="4000" :options="CountUpOptions"></count-up>
-                        </div> <span class="number-unit"
-                            style="font-size: 14px; color: rgb(111, 111, 111); font-family: 微软雅黑; font-weight: normal; text-decoration: none; font-style: normal;">平方米</span>
-                    </div>
-                    <div class="number-bottom-text"
-                        style="font-size: 16px; color: rgb(117, 100, 79); font-family: 微软雅黑; font-weight: normal; text-decoration: none; font-style: normal;">
-                        建筑面积</div>
-                </a></div>
-        </div>
-        <div class="module_content" data-aos="zoom-in-up">
-            <div class="module_content_detail module_dynamicnumber" id="312" projectid="312" rowid="218"
-                module-index="0"><a target="" rel="" class="number-link" style="text-align: center;">
-                    <div class="number-desc-wrapper">
-                        <div class="number-count module_text_content" onmouseover=""><count-up
-                                style="font-size: 54px; color: rgb(111, 111, 111); font-family: 微软雅黑; font-weight: normal; text-decoration: none; font-style: normal;"
-                                :end-val="180" :options="CountUpOptions"></count-up>
-                        </div> <span class="number-unit"
-                            style="font-size: 14px; color: rgb(111, 111, 111); font-family: 微软雅黑; font-weight: normal; text-decoration: none; font-style: normal;">多名</span>
-                    </div>
-                    <div class="number-bottom-text"
-                        style="font-size: 16px; color: rgb(117, 100, 79); font-family: 微软雅黑; font-weight: normal; text-decoration: none; font-style: normal;">
-                        拥有员工</div>
-                </a></div>
-        </div>
-        <div class="module_content" data-aos="zoom-in-up">
-            <div class="module_content_detail module_dynamicnumber" id="311" projectid="311" rowid="218"
-                module-index="0"><a target="" rel="" class="number-link" style="text-align: center;">
-                    <div class="number-desc-wrapper">
-                        <div class="number-count module_text_content" onmouseover=""><count-up
-                                style="font-size: 54px; color: rgb(111, 111, 111); font-family: 微软雅黑; font-weight: normal; text-decoration: none; font-style: normal;"
-                                :end-val="10" :options="CountUpOptions"></count-up>
-                        </div> <span class="number-unit"
-                            style="font-size: 14px; color: rgb(111, 111, 111); font-family: 微软雅黑; font-weight: normal; text-decoration: none; font-style: normal;">万件</span>
-                    </div>
-                    <div class="number-bottom-text"
-                        style="font-size: 16px; color: rgb(117, 100, 79); font-family: 微软雅黑; font-weight: normal; text-decoration: none; font-style: normal;">
-                        月出货量</div>
-                </a></div>
-        </div>
+        <num-content />
 
     </div>
     <div class="h-products">
@@ -105,7 +46,7 @@ import 'swiper/css/navigation'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import CountUp from 'vue-countup-v3'
-
+import NumContent from '/src/components/NumContent.vue'
 onMounted(() => {
     AOS.init({
         duration: 800,       // 动画持续时间
@@ -116,11 +57,6 @@ onMounted(() => {
     });
 })
 
-const CountUpOptions = ref({
-    'enableScrollSpy': true,
-    'scrollSpyDelay': 100,
-    'scrollSpyOnce': true,
-})
 
 
 const slides = [

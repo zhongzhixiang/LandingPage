@@ -12,8 +12,8 @@ import zhCN from './lang/zh-CN'
 
 const i18n = createI18n({
     legacy: false, // 使用 Composition API 模式
-  locale: 'en', // 默认语言
-  fallbackLocale: 'zh-CN', // 备用语言
+  locale: 'zh-CN', // 默认语言
+  fallbackLocale: 'en', // 备用语言
   messages: {
     'en': en,
     'zh-CN': zhCN
