@@ -8,7 +8,8 @@
             <!-- 幻灯片内容 -->
             <swiper-slide v-for="(slide, index) in slides" :key="index">
                 <div class="silde-content">
-                    <img class="slide-image" :src="slide.image" :alt="slide.title" />
+
+                    <img class="slide-image" :src="`/images/${slide.image}`" :alt="slide.title" />
                 </div>
             </swiper-slide>
         </swiper>
@@ -24,12 +25,11 @@
             </div>
         </div>
         <div class="about-img" data-aos="zoom-in-up">
-            <img src="../../public/images/office.jpg" alt="office" />
+            <img src="/images/office.jpg" alt="office" />
         </div>
     </div>
     <div class="h-data">
         <num-content />
-
     </div>
     <div class="h-products">
 
@@ -45,8 +45,10 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import CountUp from 'vue-countup-v3'
+
 import NumContent from '/src/components/NumContent.vue'
+//import homeImg1 from '/src/assets/images/155.jpg'
+
 onMounted(() => {
     AOS.init({
         duration: 800,       // 动画持续时间
@@ -63,26 +65,26 @@ const slides = [
     {
         title: 'Slide 1',
         description: 'This is the first slide',
-        image: '../public/images/155.jpg'
+        image: '155.jpg'
     },
     {
         title: 'Slide 2',
         description: 'This is the second slide',
-        image: '../public/images/183.jpg'
+        image: '183.jpg'
     },
     {
         title: 'Slide 3',
         description: 'This is the third slide',
-        image: '../public/images/187.jpg'
+        image: '187.jpg'
     },
     {
         title: 'Slide 4',
         description: 'This is the fourth slide',
-        image: '../public/images/363.jpg'
+        image: '363.jpg'
     }, {
         title: 'Slide 5',
         description: 'This is the fifth slide',
-        image: '../public/images/669.jpg'
+        image: '669.jpg'
     }
 ]
 //使用的模块
